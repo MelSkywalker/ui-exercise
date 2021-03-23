@@ -1,5 +1,5 @@
 import React from 'react';
-import useEmails from '../redux/utils';
+import useEmails from '../utils/email';
 
 import MainPage from '../pages/MainPage';
 
@@ -9,7 +9,6 @@ const App = () => {
 		<div>
 			<MainPage status={fetchStatus} />
 		</div>
-
 	)
 }
 

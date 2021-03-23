@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from "react-redux";
-import { LOAD_EMAIL_LIST } from './reducers';
+import { LOAD_EMAIL_LIST } from '../redux/reducers';
 
 async function fetchEmailList () {
 	const res = await fetch('./emails.json');
@@ -13,7 +13,7 @@ async function fetchEmailList () {
 }
 
 const useEmails = () => {
-	const [loadStatus, setStatus] = useState('');
+	const [loadStatus, setStatus] = useState('loading');
 	const dispatch = useDispatch();
 
 	useEffect(() => {

@@ -1,0 +1,69 @@
+@import "../../scss/common.scss";
+
+.header {
+	height: 48px;
+	background-color: white;
+	padding: 0 $paddingSmall;
+	font-family: $fontFamilyLogo;
+	display: flex;
+	border-bottom: $border;
+
+	.left-container {
+		padding: 0 $paddingMedium;
+		display: flex;
+		align-items: center;
+		width: 40%;
+	}
+
+	.right-container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding-right: $paddingMedium;
+		width: 60%;
+	}
+
+	.menu-icon {
+		fill: $gray;
+		margin-right: $paddingSmall;
+		@include breakpoint(large) {
+			margin-right: $paddingMedium;
+
+		}
+	}
+
+	.gmail-icon {
+		height: 25px;
+		width: auto;
+		display: inline-block;
+		margin-right: $paddingSmall;
+
+		@include breakpoint(large) {
+			height: 40px;
+			margin-right: $paddingMedium;
+		}
+	}
+
+	.title {
+		display: inline-block;
+		font-size: $fontSizeMedium;
+		font-weight: $fontWeightMedium;
+		color: $gray;
+	}
+
+	.circle {
+		background-color: $pink;
+		height: 35px;
+		width: 35px;
+		border-radius: 50%;
+	}
+
+	.first-letter {
+		color: $white;
+		font-size: $fontSizeMedium;
+		text-align: center;
+		margin: 0;
+		position: relative;
+		top: 20%;
+	}
+}
