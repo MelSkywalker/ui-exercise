@@ -1,0 +1,47 @@
+// COLORS
+$gray:                                #5f6368;
+$lightGray:                           #fcfcfc;
+$pink:                                #ff336a;
+$lightPink:                           #fce8e6;
+$white:                               #fff;
+$blackFont:                           #202124;
+$green:                               #34a853;
+$darkGreen:                           #145224;
+$yellow:                              #f5c61d;
+
+// FONT FAMILIES
+$fontFamilyLogo: 'Lexend', sans-serif;
+$mainFontFamily: 'Roboto', sans-serif;
+
+// FONT SIZES
+$fontSizeMedium:                        20px;
+$fontSizeStandard:                      16px;
+
+// FONT WEIGHTS
+$fontWeightMedium:                      500;
+
+// PAGE SPACING (padding & margin)
+$paddingSmall:                          8px;
+$paddingMedium:                         15px;
+$paddingLarge:                          45px;
+
+// BORDERS
+$borderRadiusLarge:                     20px;
+$border:                                solid 1px;
+
+// BREAKPOINTS
+$breakpoints: (
+small: 0,
+medium: 640px,
+large: 1024px,
+xlarge: 1200px,
+xxlarge: 1440px,
+) !default;
+
+@mixin breakpoint($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (min-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	}
+}

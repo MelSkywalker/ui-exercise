@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components | Header it renders the component 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="left-container"
+  >
+    <MenuIcon />
+    <GmailIcon />
+    <h1
+      className="title"
+    >
+      Gmail
+    </h1>
+  </div>
+  <div
+    className="right-container"
+  >
+    <div
+      className="circle"
+    >
+      <p
+        className="first-letter"
+      >
+        M
+      </p>
+    </div>
+  </div>
+</div>
+`;
