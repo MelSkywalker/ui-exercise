@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Redux | reducers should populate  1`] = `
+Object {
+  "0": Object {
+    "emailsById": Object {},
+    "emailsIdArray": Array [],
+  },
+  "emailsById": Object {
+    "1": Object {
+      "id": "1",
+      "subject": "Hello",
+    },
+    "2": Object {
+      "id": "2",
+      "subject": "hello!!!",
+    },
+  },
+  "emailsIdArray": Array [
+    "1",
+    "2",
+  ],
+}
+`;
+
+exports[`Redux | reducers should return the initial state 1`] = `
+Array [
+  Object {
+    "emailsById": Object {},
+    "emailsIdArray": Array [],
+  },
+]
+`;
