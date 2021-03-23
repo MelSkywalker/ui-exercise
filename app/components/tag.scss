@@ -1,0 +1,22 @@
+@import "../../scss/common.scss";
+
+.tag {
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	text-decoration: none;
+	border-radius: $borderRadiusLarge;
+	color: $white;
+	background-color: $green;
+	width: 70px;
+	height: 40px;
+
+	@include breakpoint(medium) {
+		min-width: 100px;
+	}
+
+	&:hover {
+		background-color: $darkGreen;
+	}
+}

@@ -1,12 +1,10 @@
 import React from "react";
-import EmailItem from "./EmailItem";
 import { useSelector } from "react-redux";
+import { emailSelector } from '../redux/selectors';
+import EmailItem from "./EmailItem";
 
 const EmailList = () => {
-  const { emailsById, emailsIdArray} = useSelector((state) => ({
-    emailsById: state.emailsById,
-    emailsIdArray: state.emailsIdArray
-  }));
+  const { emailsById, emailsIdArray } = useSelector(emailSelector);
   return (
     <div >
       {emailsIdArray.map(id => {

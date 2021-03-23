@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Header from '../components/Header';
+import SideBar from '../components/SideBar';
 import EmailList from '../components/EmailList';
 import './mainPage.scss';
 
@@ -10,7 +11,12 @@ const MainPage = ({status}) => {
 		<div className="main-page">
 			<Header />
 			{status === 'loaded' &&
-				<EmailList />
+				<div className="page-container">
+					<Fragment>
+						<SideBar />
+						<EmailList />
+					</Fragment>
+				</div>
 			}
 		</div>
 	)
