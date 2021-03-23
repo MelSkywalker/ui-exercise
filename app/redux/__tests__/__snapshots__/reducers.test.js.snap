@@ -1,24 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Redux | reducers should populate  1`] = `
+exports[`Redux | reducers should populate the state with emails and tags 1`] = `
 Object {
   "0": Object {
     "emailsById": Object {},
     "emailsIdArray": Array [],
+    "messageCount": null,
+    "tags": Array [],
   },
   "emailsById": Object {
     "1": Object {
       "id": "1",
       "subject": "Hello",
+      "tags": Array [
+        "tag02",
+      ],
     },
     "2": Object {
       "id": "2",
       "subject": "hello!!!",
+      "tags": Array [
+        "tag01",
+        "tag02",
+      ],
     },
   },
   "emailsIdArray": Array [
     "1",
     "2",
+  ],
+  "messageCount": 2,
+  "tags": Array [
+    "tag02",
+    "tag01",
   ],
 }
 `;
@@ -28,6 +42,8 @@ Array [
   Object {
     "emailsById": Object {},
     "emailsIdArray": Array [],
+    "messageCount": null,
+    "tags": Array [],
   },
 ]
 `;

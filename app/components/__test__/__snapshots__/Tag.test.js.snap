@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components | Tag it renders the component 1`] = `
+<button
+  className="tag"
+>
+  <p />
+</button>
+`;

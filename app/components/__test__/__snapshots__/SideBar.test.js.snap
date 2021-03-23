@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components | SideBar renders the component 1`] = `
+<div
+  className="side-bar"
+>
+  <button
+    className="side-button"
+  >
+    <InboxIcon
+      className="side-item"
+    />
+    <p
+      className="side-item inbox"
+    >
+      Inbox
+    </p>
+    <span
+      className="message-count"
+    >
+      3
+    </span>
+  </button>
+  <button
+    className="side-button"
+  >
+    <ImportantIcon
+      className="side-item"
+    />
+    <p
+      className="side-item"
+    >
+      Important
+    </p>
+  </button>
+  <h3
+    className="tag-title"
+  >
+    Tags:
+  </h3>
+  <div
+    className="tags-container"
+  >
+    <Tag
+      key="tag01"
+      tagName="tag01"
+    />
+    <Tag
+      key="tag02"
+      tagName="tag02"
+    />
+  </div>
+</div>
+`;

@@ -1,7 +1,9 @@
 export const initialState = [
 	{
 		emailsById: {},
-		emailsIdArray: []
+		emailsIdArray: [],
+		tags: [],
+		messageCount: null
 	}
 ];
 
@@ -16,14 +18,22 @@ const emailsReducer = (state = initialState, action) => {
 		case LOAD_EMAIL_LIST: {
 			const { messages } = payload;
 			const emailsById = {};
+			let allTags = [];
 			messages.forEach((message) => {
-				emailsById[message.id] = message;
+				emailsById[message.id] = message; // normalization
+				allTags.push(...message.tags);
 			});
 			const emailsIdArray = messages.map(message => message.id);
+			const tagSet = new Set(allTags);
+			const tags = Array.from(tagSet);
+			const messageCount = emailsIdArray.length;
+
 			return {
 				...state,
 				emailsById,
-				emailsIdArray
+				emailsIdArray,
+				tags,
+				messageCount
 			};
 		}
 		default:

@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components | MainPage it renders component 1`] = `
+exports[`pages | MainPage it renders the component with data 1`] = `
+<div
+  className="main-page"
+>
+  <Header />
+  <div
+    className="page-container"
+  >
+    <SideBar />
+    <EmailList />
+  </div>
+</div>
+`;
+
+exports[`pages | MainPage it renders the component without data 1`] = `
 <div
   className="main-page"
 >
