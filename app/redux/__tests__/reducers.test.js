@@ -1,7 +1,7 @@
 import React from 'react';
 import emailsReducer, { LOAD_EMAIL_LIST } from '../../redux/reducers';
 
-describe('Redux | reducers', () => {
+describe('redux | reducers', () => {
 	const payload = {
 		messages: [
 			{

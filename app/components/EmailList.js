@@ -1,22 +1,21 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { emailSelector } from '../redux/selectors';
-import EmailItem from "./EmailItem";
+import EmailItem from './EmailItem';
 
 const EmailList = () => {
-  const { emailsById, emailsIdArray } = useSelector(emailSelector);
-  return (
-    <div >
-      {emailsIdArray.map(id => {
-        return (
-          <EmailItem
-            key={id}
-            content={emailsById[id]}
-          />
-        );
-      })}
-    </div>
-  )
+	const { emailList } = useSelector(emailSelector);
+
+	return (
+		<div className="email-list">
+			{emailList.map(email => (
+				<EmailItem
+					key={email.id}
+					content={email}
+				/>
+			))}
+		</div>
+	)
 };
 
 export default EmailList;

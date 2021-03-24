@@ -1,24 +1,17 @@
 import React from 'react';
 import * as reactRedux from 'react-redux';
 import { shallow } from 'enzyme';
-import { initialState } from '../../redux/reducers';
 
 import EmailList from '../EmailList';
 
 describe('components | EmailList', () => {
 	const useSelectorMock = jest.spyOn(reactRedux, 'useSelector');
 
-	const mockStore = {
-		...initialState,
-		emailsById: {
-			'1': {
-				subject: 'hello!'
-			},
-			'2': {
-				subject: 'hello!!'
-			}
-		},
-		emailsIdArray: ['1', '2']
+	const mockEmailList = {
+		emailList: [
+			{ id: '1', subject: 'hello!'},
+			{ id: '2', subject: 'hello!!'}
+		]
 	};
 
 	beforeEach(() => {
@@ -26,7 +19,7 @@ describe('components | EmailList', () => {
 	});
 
 	it('renders the component', () => {
-		useSelectorMock.mockReturnValue(mockStore);
+		useSelectorMock.mockReturnValue(mockEmailList);
 		const component = shallow(<EmailList />);
 		expect(component).toMatchSnapshot();
 	});
