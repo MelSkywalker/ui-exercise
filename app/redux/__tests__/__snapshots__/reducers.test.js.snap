@@ -2,12 +2,6 @@
 
 exports[`redux | reducers should populate the state with emails and tags 1`] = `
 Object {
-  "0": Object {
-    "emailsById": Object {},
-    "emailsIdArray": Array [],
-    "messageCount": null,
-    "tags": Array [],
-  },
   "emailsById": Object {
     "1": Object {
       "id": "1",
@@ -30,20 +24,10 @@ Object {
     "2",
   ],
   "messageCount": 2,
+  "selectedEmails": Array [],
   "tags": Array [
     "tag02",
     "tag01",
   ],
 }
-`;
-
-exports[`redux | reducers should return the initial state 1`] = `
-Array [
-  Object {
-    "emailsById": Object {},
-    "emailsIdArray": Array [],
-    "messageCount": null,
-    "tags": Array [],
-  },
-]
 `;

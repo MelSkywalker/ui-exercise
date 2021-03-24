@@ -1,14 +1,14 @@
-export const initialState = [
-	{
+export const initialState = {
 		emailsById: {},
 		emailsIdArray: [],
 		tags: [],
-		messageCount: null
-	}
-];
+		messageCount: null,
+		selectedEmails: []
+};
 
 // Actions
 export const LOAD_EMAIL_LIST = 'LOAD_EMAIL_LIST';
+export const SELECT_EMAIL = 'SELECT_EMAIL';
 
 // Reducers
 const emailsReducer = (state = initialState, action) => {
@@ -34,6 +34,21 @@ const emailsReducer = (state = initialState, action) => {
 				emailsIdArray,
 				tags,
 				messageCount
+			};
+		}
+		case SELECT_EMAIL: {
+			const { selectedItemId, selectedItemStatus } = payload;
+			const { selectedEmails } = state;
+			const items = selectedEmails;
+			if (selectedItemStatus && !items.includes(selectedItemId)) {
+				items.push(selectedItemId)
+			} else {
+				const index = items.indexOf(selectedItemId);
+				items.splice(index, 1);
+			}
+			return {
+				...state,
+				selectedEmails: items
 			};
 		}
 		default:

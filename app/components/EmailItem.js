@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { SELECT_EMAIL } from '../redux/reducers';
 import dateFormatter from '../utils/date';
 import messageFormatter from '../utils/text';
 import ImportantIcon from './svg/ImportantIcon';
@@ -6,13 +8,30 @@ import ImportantIcon from './svg/ImportantIcon';
 import './emailItem.scss';
 
 const EmailItem = ({ content }) => {
-	const { date, sender, subject, body, tags } = content;
-
+	const { date, sender, subject, body, tags, id } = content;
 	const formattedDate = dateFormatter(date);
+
+	const [selectedItem, setSelectedItems] = useState({});
+	const dispatch = useDispatch();
+
+	const handleCheckboxChange = (e) => {
+		setSelectedItems({ [e.target.name]: e.target.checked });
+		dispatch({
+			type: SELECT_EMAIL,
+			payload: {
+				selectedItemId: id,
+				selectedItemStatus: selectedItem
+			}
+		});
+	};
+
 	return (
 		<div className="email-item">
 			<input
 				type="checkbox"
+				name={`checkbox${id}`}
+				checked={selectedItem[id]}
+				onChange={handleCheckboxChange}
 				className="msg-checkbox item-element"
 			/>
 			<button>

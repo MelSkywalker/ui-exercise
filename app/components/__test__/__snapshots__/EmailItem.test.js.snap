@@ -6,6 +6,8 @@ exports[`components | EmailItem it renders component 1`] = `
 >
   <input
     className="msg-checkbox item-element"
+    name="checkbox1"
+    onChange={[Function]}
     type="checkbox"
   />
   <button>
