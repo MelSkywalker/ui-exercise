@@ -1,0 +1,70 @@
+@import '../../scss/common.scss';
+
+.email-item {
+	width: 100%;
+	border-bottom: $border;
+	font-size: $fontSizeTiny;
+	@include breakpoint(medium) {
+		font-size: $fontSizeStandard;
+	}
+
+	&:hover {
+		border: outset;
+	}
+
+	.item-element {
+		display: inline-block;
+	}
+
+	.msg-checkbox {
+		width: 13px;
+		margin: 0;
+		@include breakpoint(large) {
+			width: 40px;
+		}
+	}
+
+	.sender {
+		width: 250px;
+		font-weight: $fontWeightBold;
+	}
+
+	.subject {
+		font-weight: $fontWeightBold;
+	}
+
+	.message {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		@include breakpoint(medium){
+			display: inline-block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			max-width: 500px;
+			margin-right: $paddingLarge;
+		}
+	}
+
+	.message-body,
+	.subject {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.date {
+		float: right;
+		width: 10%;
+		font-weight: $fontWeightBold;
+	}
+
+	.email-tags {
+		width: 250px;
+	}
+
+	.email-tag {
+		margin-right: $paddingSmall;
+	}
+}

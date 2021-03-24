@@ -4,6 +4,7 @@ exports[`components | EmailList renders the component 1`] = `
 <div
   className="email-list"
 >
+  <ActionsBar />
   <EmailItem
     content={
       Object {
