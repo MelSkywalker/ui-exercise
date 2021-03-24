@@ -5,6 +5,7 @@ import GmailIcon from '../svg/GmailIcon';
 import MenuIcon from '../svg/MenuIcon';
 import InboxIcon from '../svg/InboxIcon';
 import ImportantIcon from '../svg/ImportantIcon';
+import TrashIcon from '../svg/TrashIcon';
 
 describe('components | svg', () => {
 	it('renders the GmailIcon component', () => {
@@ -21,6 +22,10 @@ describe('components | svg', () => {
 	});
 	it('renders the ImportantIcon component', () => {
 		const component = shallow(<ImportantIcon />);
+		expect(component).toMatchSnapshot();
+	});
+	it('renders the TrashIcon component', () => {
+		const component = shallow(<TrashIcon />);
 		expect(component).toMatchSnapshot();
 	});
 });

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components | ActionsBar it renders the component 1`] = `
+<div
+  className="actions-bar"
+>
+  <input
+    className="select-all"
+    type="checkbox"
+  />
+  <ImportantIcon />
+  <button>
+    <TrashIcon />
+  </button>
+</div>
+`;

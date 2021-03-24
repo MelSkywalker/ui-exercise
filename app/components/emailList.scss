@@ -1,0 +1,15 @@
+@import '../../scss/common.scss';
+
+.email-list {
+	width: 100%;
+	padding: 0 $paddingMedium;
+
+	.svg {
+		width: 40px;
+	}
+
+	.svg path {
+		fill: none;
+		stroke: $blackFont;
+	}
+}

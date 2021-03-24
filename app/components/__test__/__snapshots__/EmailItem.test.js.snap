@@ -1,10 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components | EmailItem it renders component 1`] = `
-<div>
-  <p>
-    Subject: 
-    hello
+<div
+  className="email-item"
+>
+  <input
+    className="msg-checkbox item-element"
+    type="checkbox"
+  />
+  <button>
+    <ImportantIcon
+      className="item-element"
+    />
+  </button>
+  <p
+    className="sender item-element"
+  >
+    someone@fakemail.com
   </p>
+  <p
+    className="date item-element"
+  >
+    3/5/17
+  </p>
+  <div
+    className="message item-element"
+  >
+    <span
+      className="subject"
+    >
+      hello - 
+    </span>
+    <span
+      className="message-body"
+    >
+      Just wanted to say hello Just wanted to say hello Just wanted to say hello Just wanted to say hello.
+    </span>
+  </div>
+  <div
+    className="email-tags item-element"
+  />
 </div>
 `;

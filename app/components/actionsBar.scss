@@ -1,0 +1,17 @@
+@import '../../scss/common.scss';
+
+.actions-bar {
+	width: 100%;
+	height: 50px;
+	border-bottom: $border;
+	display: flex;
+    align-items: center;
+
+	.select-all {
+		width: 13px;
+		margin: 0;
+		@include breakpoint(large) {
+			width: 40px;
+		}
+	}
+}
