@@ -1,7 +1,13 @@
 export const emailSelector = (state) => {
+	const { emailsById, emailsIdArray } = state;
+	const emailList = [];
+
+	emailsIdArray.forEach((id) => {
+		emailList.push(emailsById[id]);
+	});
+
 	return {
-		emailsById: state.emailsById,
-		emailsIdArray: state.emailsIdArray
+		emailList
 	}
 }
 

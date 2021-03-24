@@ -22,24 +22,23 @@ describe('redux | selectors', () => {
 
 	it('emailSelector returns the right data from state', () => {
 			const emailData = {
-				emailsById: {
-					"1": {
+				emailList: [
+					{
 						id: "1",
 						subject: "hey!",
 						tags: ['tag01', 'tag02']
 					},
-					"2": {
+					{
 						id: "2",
 						subject: "Attention!",
 						tags: []
 					}
-				},
-				emailsIdArray: ['1', '2'],
+				]
 			};
 		expect(emailSelector(state)).toEqual(emailData);
 	});
 
-	it('emailSelector returns the right data from state', () => {
+	it('sideBarSelector returns the right data from state', () => {
 		const sideBarData = {
 			tagList: ['tag01', 'tag02'],
 			messageCount: 2

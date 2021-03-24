@@ -1,10 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components | EmailList renders the component 1`] = `
-<div>
+<div
+  className="email-list"
+>
   <EmailItem
     content={
       Object {
+        "id": "1",
         "subject": "hello!",
       }
     }
@@ -13,6 +16,7 @@ exports[`components | EmailList renders the component 1`] = `
   <EmailItem
     content={
       Object {
+        "id": "2",
         "subject": "hello!!",
       }
     }

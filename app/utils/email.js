@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
-import { useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux';
 import { LOAD_EMAIL_LIST } from '../redux/reducers';
 
-async function fetchEmailList () {
+export async function fetchEmailList () {
 	const res = await fetch('./emails.json');
 	if (res.ok) {
 		return await res.json();
 	}
 	else {
-		throw new Error('Error loading data');
+		throw new Error('Error fetching data');
 	}
 }
 
@@ -30,7 +30,7 @@ const useEmails = () => {
 		.catch((err) => {
 			console.log(err);
 		})
-	})
+	});
 
 	return loadStatus;
 }
