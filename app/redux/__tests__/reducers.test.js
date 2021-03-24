@@ -1,7 +1,13 @@
 import React from 'react';
-import emailsReducer, { initialState, LOAD_EMAIL_LIST, SELECT_EMAIL } from '../../redux/reducers';
+import emailsReducer,
+	{	initialState,
+		LOAD_EMAIL_LIST,
+		SELECT_EMAIL,
+		DELETE_MESSAGE
+	} from '../../redux/reducers';
 
 describe('redux | reducers', () => {
+
 	it('should return the initial state', () => {
 		const initState = initialState;
 		expect(emailsReducer(undefined, {})).toEqual(initState);
@@ -11,14 +17,14 @@ describe('redux | reducers', () => {
 		const payload = {
 			messages: [
 				{
-					"id": "1",
-					"subject": "Hello",
-					"tags": ["tag02"]
+					'id': '1',
+					'subject': 'Hello',
+					'tags': ['tag02']
 				},
 				{
-					"id": "2",
-					"subject": "hello!!!",
-					"tags": ["tag01", "tag02"]
+					'id': '2',
+					'subject': 'hello!!!',
+					'tags': ['tag01', 'tag02']
 				}
 			]
 		};
@@ -69,5 +75,54 @@ describe('redux | reducers', () => {
 		});
 
 		expect(newState.selectedEmails).toEqual(['4']);
+	});
+
+	it('should remove from the state the selected emails', () => {
+		const state = {
+			emailsById: {
+				1: {
+					'id': '1',
+					'subject': 'Hello'
+				},
+				2: {
+					'id': '2',
+					'subject': 'hello!!!'
+				},
+				3: {
+					'id': '2',
+					'subject': 'hey!'
+				},
+			},
+			emailsIdArray: ['1', '2', '3'],
+			selectedEmails: ['3', '1']
+		};
+
+		const newState = emailsReducer(state, { type: DELETE_MESSAGE });
+		expect(newState.selectedEmails).toHaveLength(0);
+		expect(newState.emailsIdArray).toEqual(['2']);
+	});
+
+	it('returns the state if DELETE_ACTION is called but there are no emails selected', () => {
+		const state = {
+			emailsById: {
+				1: {
+					'id': '1',
+					'subject': 'Hello'
+				},
+				2: {
+					'id': '2',
+					'subject': 'hello!!!'
+				},
+				3: {
+					'id': '2',
+					'subject': 'hey!'
+				},
+			},
+			emailsIdArray: ['1', '2', '3'],
+			selectedEmails: []
+		};
+
+		const newState = emailsReducer(state, { type: DELETE_MESSAGE });
+		expect(newState).toEqual(state);
 	});
 });
