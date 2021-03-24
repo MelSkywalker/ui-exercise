@@ -8,7 +8,9 @@ exports[`components | ActionsBar it renders the component 1`] = `
     className="select-all"
     type="checkbox"
   />
-  <ImportantIcon />
+  <button>
+    <ImportantIcon />
+  </button>
   <button>
     <TrashIcon />
   </button>
