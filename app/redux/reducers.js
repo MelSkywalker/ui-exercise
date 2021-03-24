@@ -9,6 +9,7 @@ export const initialState = {
 // Actions
 export const LOAD_EMAIL_LIST = 'LOAD_EMAIL_LIST';
 export const SELECT_EMAIL = 'SELECT_EMAIL';
+export const DELETE_MESSAGE = 'DELETE_MESSAGE';
 
 // Reducers
 const emailsReducer = (state = initialState, action) => {
@@ -50,6 +51,28 @@ const emailsReducer = (state = initialState, action) => {
 				...state,
 				selectedEmails: items
 			};
+		}
+		case DELETE_MESSAGE: {
+			const { emailsById, emailsIdArray, selectedEmails } = state; // emailsIdList
+			if (selectedEmails.length) {
+				const emailsToRemove = selectedEmails;
+				const newEmailsById = { ...emailsById };
+				const newIdArray = [...emailsIdArray];
+
+				emailsToRemove.forEach(id => {
+					delete newEmailsById[id];
+					const index = newIdArray.indexOf(id); // TODO: automate emailsIdArray hydration
+					newIdArray.splice(index, 1);
+				});
+
+				return {
+					...state,
+					emailsById: newEmailsById,
+					emailsIdArray: newIdArray,
+					selectedEmails: []
+				}
+			}
+			return state;
 		}
 		default:
 		return state;

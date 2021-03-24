@@ -11,7 +11,10 @@ exports[`components | ActionsBar it renders the component 1`] = `
   <button>
     <ImportantIcon />
   </button>
-  <button>
+  <button
+    className="delete-button"
+    onClick={[Function]}
+  >
     <TrashIcon />
   </button>
 </div>
