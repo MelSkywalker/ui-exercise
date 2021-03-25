@@ -27,8 +27,7 @@ const SideBar = () => {
 		<div className="side-bar">
 			<button className="inbox-button side-button" name="all" onClick={handleFilterItems}>
 				<InboxIcon className="side-item" />
-				<p className="side-item inbox">Inbox</p>
-				<span className="message-count">{messageCount}</span>
+				Inbox {messageCount}
 			</button>
 			<button className="side-button">
 				<ImportantIcon className="side-item" />

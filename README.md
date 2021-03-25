@@ -6,10 +6,13 @@ You can see it working on [this link](https://melskywalker.github.io/ui-exercise
 
 This project has been built with *React, Redux, React-Redux and SASS* and it is tested with *Jest and Enzyme.*
 
+### Mobile
 ![mobile](./public/assets/mobile.png)
 
+### Tablet
 ![tablet](./public/assets/tablet.png)
 
+### Desktop
 ![desktop](./public/assets/desktop.png)
 
 ## Functionality
@@ -27,6 +30,6 @@ This project has been built with *React, Redux, React-Redux and SASS* and it is 
 - Use `yarn start` to run locally. It will run on port **8080**
 - Use `yarn jest -u` to run tests and update snapshots
 
-*After running the tests you can take a closer look at the test coverage in `/coverage/lcov-report/index.html` file*
+- *After running the tests you can take a closer look at the test coverage in `/coverage/lcov-report/index.html` file*
 
 ### Have an awesome day!

@@ -2,9 +2,11 @@ export const emailSelector = (state) => {
 	const { emailsById, emailsIdArray, filter } = state;
 	const emailList = []; // these are the messages to show
 
-	emailsIdArray[filter].forEach((id) => {
-		emailList.push(emailsById[id]);
-	});
+	if(emailsIdArray[filter]) {
+		emailsIdArray[filter].forEach((id) => {
+			emailList.push(emailsById[id]);
+		});
+	}
 
 	return {
 		emailList
@@ -17,4 +19,3 @@ export const sideBarSelector = (state) => {
 		messageCount: state.messageCount
 	}
 }
-
