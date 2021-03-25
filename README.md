@@ -8,9 +8,9 @@ This project has been built with *React, Redux, React-Redux and SASS* and it is 
 
 ![mobile](./public/assets/mobile.png)
 
-![tablet](./public/assets/mobile.png)
+![tablet](./public/assets/tablet.png)
 
-![desktop](./public/assets/mobile.png)
+![desktop](./public/assets/desktop.png)
 
 ## Functionality
 - Select one or more emails from the list
