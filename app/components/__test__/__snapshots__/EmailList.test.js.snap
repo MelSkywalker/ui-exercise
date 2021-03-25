@@ -9,7 +9,11 @@ exports[`components | EmailList renders the component 1`] = `
     content={
       Object {
         "id": "1",
-        "subject": "hello!",
+        "subject": "hey!",
+        "tags": Array [
+          "work",
+          "travel",
+        ],
       }
     }
     key="1"
@@ -18,7 +22,8 @@ exports[`components | EmailList renders the component 1`] = `
     content={
       Object {
         "id": "2",
-        "subject": "hello!!",
+        "subject": "Attention!",
+        "tags": Array [],
       }
     }
     key="2"

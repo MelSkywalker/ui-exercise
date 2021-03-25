@@ -9,8 +9,16 @@ describe('components | EmailList', () => {
 
 	const mockEmailList = {
 		emailList: [
-			{ id: '1', subject: 'hello!'},
-			{ id: '2', subject: 'hello!!'}
+			{
+				id: "1",
+				subject: "hey!",
+				tags: ['work', 'travel']
+			},
+			{
+				id: "2",
+				subject: "Attention!",
+				tags: []
+			}
 		]
 	};
 

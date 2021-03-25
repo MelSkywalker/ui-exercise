@@ -5,7 +5,9 @@ exports[`components | SideBar renders the component 1`] = `
   className="side-bar"
 >
   <button
-    className="side-button"
+    className="inbox-button side-button"
+    name="all"
+    onClick={[Function]}
   >
     <InboxIcon
       className="side-item"
@@ -42,12 +44,14 @@ exports[`components | SideBar renders the component 1`] = `
     className="tags-container"
   >
     <Tag
-      key="tag01"
-      tagName="tag01"
+      handleFilterItems={[Function]}
+      key="work"
+      tagName="work"
     />
     <Tag
-      key="tag02"
-      tagName="tag02"
+      handleFilterItems={[Function]}
+      key="travel"
+      tagName="travel"
     />
   </div>
 </div>

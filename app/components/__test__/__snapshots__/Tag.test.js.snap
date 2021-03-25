@@ -3,7 +3,9 @@
 exports[`components | Tag it renders the component 1`] = `
 <button
   className="tag"
+  name="work"
+  onClick={[MockFunction]}
 >
-  <p />
+  work
 </button>
 `;
