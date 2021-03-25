@@ -34,7 +34,7 @@ const emailsReducer = (state = initialState, action) => {
 
 			const all = messages.map(message => message.id);
 
-			// TODO: populare dinamically
+			// TODO: populate dinamically
 			const workEmails = messages.filter(message => message.tags.includes('work')).map(message => message.id);
 			const travelEmails = messages.filter(message => message.tags.includes('travel')).map(message => message.id);
 
@@ -92,10 +92,13 @@ const emailsReducer = (state = initialState, action) => {
 
 				});
 
+				const newEmailCount = newIdArray.all.length;
+
 				return {
 					...state,
 					emailsById: newEmailsById,
-					selectedEmails: []
+					selectedEmails: [],
+					messageCount: newEmailCount
 				}
 			}
 			return state;
