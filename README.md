@@ -23,6 +23,7 @@ This project has been built with *React, Redux, React-Redux and SASS* and it is 
 
 ## Running locally
 - Use `yarn` to install the dependencies needed
+- Use `yarn dev` to build
 - Use `yarn start` to run locally. It will run on port **8080**
 - Use `yarn jest -u` to run tests and update snapshots
 
