@@ -7,27 +7,37 @@ Object {
       "id": "1",
       "subject": "Hello",
       "tags": Array [
-        "tag02",
+        "travel",
       ],
     },
     "2": Object {
       "id": "2",
       "subject": "hello!!!",
       "tags": Array [
-        "tag01",
-        "tag02",
+        "work",
+        "travel",
       ],
     },
   },
-  "emailsIdArray": Array [
-    "1",
-    "2",
-  ],
+  "emailsIdArray": Object {
+    "all": Array [
+      "1",
+      "2",
+    ],
+    "travel": Array [
+      "1",
+      "2",
+    ],
+    "work": Array [
+      "2",
+    ],
+  },
+  "filter": "all",
   "messageCount": 2,
   "selectedEmails": Array [],
   "tags": Array [
-    "tag02",
-    "tag01",
+    "travel",
+    "work",
   ],
 }
 `;

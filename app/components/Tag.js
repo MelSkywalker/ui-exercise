@@ -1,11 +1,10 @@
 import React from 'react';
-
 import './tag.scss';
 
-const Tag = ({tagName}) => {
+const Tag = ({tagName, handleFilterItems}) => {
 	return(
-		<button className="tag">
-			<p>{tagName}</p>
+		<button className="tag" onClick={handleFilterItems} name={tagName}>
+			{tagName}
 		</button>
 	);
 }

@@ -1,8 +1,8 @@
 export const emailSelector = (state) => {
-	const { emailsById, emailsIdArray } = state;
-	const emailList = [];
+	const { emailsById, emailsIdArray, filter } = state;
+	const emailList = []; // these are the messages to show
 
-	emailsIdArray.forEach((id) => {
+	emailsIdArray[filter].forEach((id) => {
 		emailList.push(emailsById[id]);
 	});
 

@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { DELETE_MESSAGE } from '../redux/reducers';
 import ImportantIcon from './svg/ImportantIcon';
@@ -15,6 +15,7 @@ const ActionsBar = () => {
 			type: DELETE_MESSAGE
 		})
 	};
+
 	return (
 		<div className="actions-bar">
 			<input type="checkbox" className="select-all" />

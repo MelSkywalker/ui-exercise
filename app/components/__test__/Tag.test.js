@@ -5,7 +5,8 @@ import Tag from '../Tag';
 
 describe('components | Tag', () => {
 	it('it renders the component', () => {
-		const component = shallow(<Tag />);
+		const props = { tagName: 'work', handleFilterItems: jest.fn() }
+		const component = shallow(<Tag {...props} />);
 		expect(component).toMatchSnapshot();
 	});
 });
