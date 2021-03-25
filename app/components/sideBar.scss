@@ -78,12 +78,4 @@
 			background-color: $lightPink;
 		}
 	}
-
-	.message-count {
-		display: none;
-
-		@include breakpoint(medium) {
-			display: inline-block;
-		}
-	}
 }

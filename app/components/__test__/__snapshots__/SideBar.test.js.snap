@@ -12,16 +12,8 @@ exports[`components | SideBar renders the component 1`] = `
     <InboxIcon
       className="side-item"
     />
-    <p
-      className="side-item inbox"
-    >
-      Inbox
-    </p>
-    <span
-      className="message-count"
-    >
-      3
-    </span>
+    Inbox 
+    3
   </button>
   <button
     className="side-button"

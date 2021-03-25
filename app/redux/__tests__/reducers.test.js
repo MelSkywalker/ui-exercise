@@ -5,7 +5,7 @@ import emailsReducer,
 		SELECT_EMAIL,
 		DELETE_MESSAGE,
 		FILTER_EMAILS
-	} from '../../redux/reducers';
+	} from '../reducers';
 
 describe('redux | reducers', () => {
 
